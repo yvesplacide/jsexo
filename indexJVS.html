@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="reversed">renverser</button>
+    <ul id="ReverseElement">
+        <li>Element A</li>
+        <li>Element B</li>
+        <li>Element C</li>
+        <li>Element D</li>
+    </ul>
+
+    <script>
+        const list = document.getElementById("ReverseElement")
+        const btnReverse = document.getElementById("reversed")
+        btnReverse.addEventListener("click", () => {
+            const listItems = Array.from(list.getElementsByTagName("li"))
+            const EltReverse = listItems.reverse()
+            EltReverse.forEach((item) => list.appendChild(item) )
+        })
+    </script>
+</body>
+</html>
